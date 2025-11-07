@@ -10,7 +10,7 @@ export default function ShoesList() {
     <FlatList data={data}
               renderItem={({item}) => <VerticalCard item={item}/>}
               horizontal
-              ItemSeparatorComponent={<ItemSeparator width={spaces.L}/>}
+              ItemSeparatorComponent={() => <ItemSeparator width={spaces.L}/>}
               contentContainerStyle={styles.listContainer}
               showsHorizontalScrollIndicator={false}
     />
