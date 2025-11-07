@@ -4,11 +4,12 @@ import {spaces} from "../../constants/spaces";
 import {radius} from "../../constants/radius";
 import {EvilIcons} from "@expo/vector-icons";
 import {textSize} from "../../constants/textSize";
+import {ICON_SIZE} from "../../constants/size";
 
 export default function SearchInput({placeholder, value, onChangeText}) {
   return (
     <View style={styles.inputContainer}>
-      <EvilIcons name="search" size={32} color={colors.GREY} style={styles.searchIcon}/>
+      <EvilIcons name="search" size={ICON_SIZE} color={colors.GREY} style={styles.searchIcon}/>
       <TextInput placeholder={placeholder} value={value} onChangeText={onChangeText} style={styles.input}/>
     </View>
   )
