@@ -3,11 +3,11 @@ import {spaces} from "../../../constants/spaces";
 import Banner from "../components/Banner";
 import ShoesList from "./components/ShoesList";
 
-export default function ListSection() {
+export default function ListSection({selectedBrand}) {
   return (
     <View style={styles.container}>
       <Banner text="Shoes populaires"/>
-      <ShoesList /*selectedBrand={selectedBrand} inputValue={inputValue}*//>
+      <ShoesList selectedBrand={selectedBrand}/>
     </View>
   )
 };

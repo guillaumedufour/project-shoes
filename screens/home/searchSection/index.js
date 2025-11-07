@@ -1,13 +1,11 @@
 import {View, StyleSheet} from "react-native";
 import SearchInput from "../../../ui-components/inputs/SearchInput";
-import {useState} from "react";
 import BrandsList from "./components/BrandsList";
 
-export default function SearchSection() {
-  const [inputValue, setInputValue] = useState("")
+export default function SearchSection({inputValue, setInputValue, selectedBrand, setSelectedBrand}) {
   return <View style={styles.container}>
     <SearchInput placeholder="Trouvez vos shoes" value={inputValue} onChangeText={setInputValue}/>
-    <BrandsList/>
+    <BrandsList selectedBrand={selectedBrand} setSelectedBrand={setSelectedBrand}/>
   </View>
 }
 

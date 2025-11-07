@@ -4,8 +4,8 @@ import VerticalCard from "./VerticalCard";
 import ItemSeparator from "../../../../ui-components/separators/ListItemSeparator";
 import {spaces} from "../../../../constants/spaces";
 
-export default function ShoesList() {
-  const data = shoes[0].stock.filter(elem => !elem.new)
+export default function ShoesList({selectedBrand}) {
+  const data = shoes[0].find(elem => elem.brand === selectedBrand).stock.filter((item) => !item.new);
   return (
     <FlatList data={data}
               renderItem={({item}) => <VerticalCard item={item}/>}
