@@ -15,9 +15,10 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <StatusBar/>
       <View style={{width: "100%", backgroundColor: "#000", height: 60}}></View>
-      <SearchSection inputValue={inputValue} setInputValue={setInputValue} selectedBrand={selectedBrand} setSelectedBrand={setSelectedBrand}/>
-      <ListSection selectedBrand={selectedBrand}/>
-      <NewsSection/>
+      <SearchSection inputValue={inputValue} setInputValue={setInputValue} selectedBrand={selectedBrand}
+                     setSelectedBrand={setSelectedBrand}/>
+      <ListSection selectedBrand={selectedBrand} inputValue={inputValue}/>
+      <NewsSection selectedBrand={selectedBrand}/>
       <View style={{width: "100%", backgroundColor: "#000", height: 106}}></View>
     </SafeAreaView>
   );
