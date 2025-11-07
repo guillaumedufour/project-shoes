@@ -1,8 +1,9 @@
 import {FlatList, StyleSheet} from "react-native";
 import {brands} from "../../../../data/brand";
 import BrandItem from "./BrandItem";
-import ItemHorizontalSeparator from "./ItemHorizontalSeparator";
 import {useState} from "react";
+import ItemSeparator from "../../../../ui-components/separators/ListItemSeparator";
+import {spaces} from "../../../../constants/spaces";
 
 export default function BrandsList() {
   const [selectedBrand, setSelectedBrand] = useState("nike");
@@ -18,7 +19,7 @@ export default function BrandsList() {
                 />}
               style={styles.listContainer}
               contentContainerStyle={styles.contentStyle}
-              ItemSeparatorComponent={ItemHorizontalSeparator}
+              ItemSeparatorComponent={<ItemSeparator width={spaces.S}/>}
     />
   );
 }
