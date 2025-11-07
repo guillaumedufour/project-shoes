@@ -7,7 +7,7 @@ export default function ListSection() {
   return (
     <View style={styles.container}>
       <Banner text="Shoes populaires"/>
-      <ShoesList/>
+      <ShoesList /*selectedBrand={selectedBrand} inputValue={inputValue}*//>
     </View>
   )
 };
