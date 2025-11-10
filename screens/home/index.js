@@ -4,7 +4,6 @@ import SearchSection from "./searchSection";
 import ListSection from "./listSection";
 import NewsSection from "./newsSection";
 import {useState} from "react";
-import {brands} from "../../data/brand";
 
 
 export default function HomeScreen() {
