@@ -1,4 +1,4 @@
-import {View, StyleSheet, TextInput} from "react-native";
+import {View, StyleSheet, TextInput, Platform} from "react-native";
 import {colors} from "../../constants/colors";
 import {spaces} from "../../constants/spaces";
 import {radius} from "../../constants/radius";
@@ -26,7 +26,9 @@ const styles = StyleSheet.create({
     maxWidth: 360,
   },
   searchIcon: {
-    marginHorizontal: spaces.M
+    marginHorizontal: spaces.M,
+    borderWith: 2,
+    marginBottom: Platform.select({android: spaces.XS, ios: 0}),
   },
   input: {
     flex: 1,
