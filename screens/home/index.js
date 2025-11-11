@@ -14,7 +14,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <StatusBar/>
       <View style={{width: "100%", backgroundColor: "#000", height: 60}}></View>
-      <ScrollView style={styles.scrollViewContainer}>
+      <ScrollView style={styles.scrollViewContainer} bounces={false}>
         <SearchSection inputValue={inputValue} setInputValue={setInputValue} selectedBrand={selectedBrand}
                        setSelectedBrand={setSelectedBrand}/>
         <ListSection selectedBrand={selectedBrand} inputValue={inputValue}/>
