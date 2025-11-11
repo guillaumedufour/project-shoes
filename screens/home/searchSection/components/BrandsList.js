@@ -7,7 +7,9 @@ import {spaces} from "../../../../constants/spaces";
 export default function BrandsList({selectedBrand, setSelectedBrand}) {
   return (
     <FlatList horizontal
+              showsHorizontalScrollIndicator={false} 
               data={brands}
+              bounces={false}
               keyExtractor={(item) => item.name}
               renderItem={({item, index}) =>
                 <BrandItem item={item}

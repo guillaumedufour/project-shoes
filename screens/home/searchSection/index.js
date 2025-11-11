@@ -12,6 +12,8 @@ export default function SearchSection({inputValue, setInputValue, selectedBrand,
 const styles = StyleSheet.create({
   container: {
     flex: 120,
+    minHeight: 120,
     justifyContent: "space-evenly",
+    alignItems: "center",
   }
 })

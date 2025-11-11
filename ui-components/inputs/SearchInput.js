@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.WHITE,
     marginHorizontal: spaces.L,
     borderRadius: radius.FULL,
-    height: 50
+    height: 50,
+    maxWidth: 360,
   },
   searchIcon: {
     marginHorizontal: spaces.M
