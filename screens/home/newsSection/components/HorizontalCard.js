@@ -1,4 +1,4 @@
-import {View, StyleSheet, Image} from "react-native";
+import {View, StyleSheet, Image, useWindowDimensions} from "react-native";
 import TextMediumM from "../../../../ui-components/texts/TextMediumM";
 import TextBoldXL from "../../../../ui-components/texts/TextBoldXL";
 import {colors} from "../../../../constants/colors";
@@ -8,6 +8,20 @@ import TextBoldM from "../../../../ui-components/texts/textBoldM";
 import {IS_LARGE_SCREEN} from "../../../../constants/size";
 
 export default function HorizontalCard({item}) {
+  const {height} = useWindowDimensions();
+  const landscapeImageStyle = {
+    image: {
+      width: "100%",
+      height: "100%",
+      transform: [
+        {rotate: "-20deg"},
+        {translateX: -spaces.M},
+        {translateY: -spaces.L},
+        {scale: 0.8},
+      ],
+    },
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.descriptionContainer}>
@@ -18,7 +32,7 @@ export default function HorizontalCard({item}) {
         <TextBoldM>{item.price} €</TextBoldM>
       </View>
       <View style={styles.imageContainer}>
-        <Image source={item.items[0].image} style={styles.image}/>
+        <Image source={item.items[0].image} style={height < 400 ? landscapeImageStyle : styles.image}/>
       </View>
     </View>
   );
